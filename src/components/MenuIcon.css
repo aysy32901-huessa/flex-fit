@@ -1,0 +1,19 @@
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: currentColor;
+  transition: all 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+}

@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #222; /* بدل الأبيض */
+  color: #f1f1f1;        /* بدل الأسود */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar.dark {
+  background-color: #111;
+  color: #ddd; /* بدل الأبيض */
+}
+
+
+.logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;       /* صف أفقي */
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  display: inline-block;  
+  transition: color 0.3s, background 0.3s;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 1.2rem; /* تكبير الخط */
+  font-weight: 500;  /* لو تحب يعطي وضوح أكتر */
+}
+
+
+/* نحذف ::after نهائيًا */
+/* Hover effect بالمربع فقط */
+.nav-links li a:hover {
+  background-color: rgba(255, 69, 0, 0.2); /* المربع البرتقالي الخفيف */
+}
+
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #ff4500;
+  transition: width 0.3s; /* نقصت الفاصلة هنا */
+}
+
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shop-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.shop-btn:hover {
+  background-color: #e03e00;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: inherit;
+    text-align: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-icons .shop-btn {
+    display: none;
+  }
+}

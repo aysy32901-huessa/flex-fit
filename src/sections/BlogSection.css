@@ -1,0 +1,176 @@
+.blog-section {
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8.5rem; /* زودت المسافة بين الكروت */
+  justify-content: center;
+}
+
+
+.blog-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 400px; /* الحجم ثابت لكل كارت */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.blog-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+/* زر "اقرأ المزيد" ستايل جديد */
+.read-more-btn {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(45deg, #ff4500, #ffb347);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.read-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+}
+
+
+.products-section {
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.products-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: inline-block;
+  background-color: rgba(255, 69, 0, 0.8); /* كارت شفاف للعنوان */
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* كارت المنتج */
+.product-card {
+  position: relative;
+  background: #1c1c1c;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px; /* الحجم الطبيعي */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* شارة المنتج NEW أو SALE */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff4500;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* صورة المنتج */
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* اسم المنتج */
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* السعر */
+.product-card .price {
+  font-size: 1rem;
+  color: #ff4500;
+  margin-bottom: 0.5rem;
+}
+
+/* التقييم */
+.product-card .rating {
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+}
+
+/* وصف المنتج */
+.product-card .description {
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+/* زر إضافة للسلة */
+.add-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #e03e00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.5);
+}
+
+/* تصميم متجاوب: على الموبايل الكروت تحت بعض */
+@media screen and (max-width: 768px) {
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;
+  }
+}
